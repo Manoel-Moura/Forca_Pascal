@@ -7,9 +7,8 @@ var
   EncontrouLetra: boolean;
 
 begin
-  //write('Digite a palavra secreta: ');
-  //readln(PalavraSecreta);
-   PalavraSecreta := 'palavrasecreta';
+  write('Digite a palavra secreta: ');
+  readln(PalavraSecreta);
   
   TentativasRestantes := Length(PalavraSecreta);
   PalavraSecreta := Upcase(PalavraSecreta);
@@ -38,10 +37,10 @@ begin
     end;
 
     if EncontrouLetra then
-      writeln('A letra "', LetraDigitada, '" pertence à palavra secreta.')
+      writeln('A letra "', LetraDigitada, '" pertence ï¿½ palavra secreta.')
     else
     begin
-      writeln('A letra "', LetraDigitada, '" NÃO pertence à palavra secreta.');
+      writeln('A letra "', LetraDigitada, '" Nï¿½O pertence ï¿½ palavra secreta.');
       TentativasRestantes := TentativasRestantes - 1;
     end;
 
@@ -53,13 +52,13 @@ begin
 
     if PalavraAdivinhada = PalavraSecreta then
     begin
-      writeln('Parabéns! Você adivinhou a palavra secreta: ', PalavraSecreta);
+      writeln('Parabï¿½ns! Vocï¿½ adivinhou a palavra secreta: ', PalavraSecreta);
       break;
     end;
   end;
 
   if PalavraAdivinhada <> PalavraSecreta then
-    writeln('Você perdeu. A palavra secreta era: ', PalavraSecreta);
+    writeln('Vocï¿½ perdeu. A palavra secreta era: ', PalavraSecreta);
 end.
 
 
